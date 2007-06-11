@@ -9,10 +9,10 @@ WriteMakefile
           'VERSION_FROM' => 'lib/Test/Run/Plugin/ColorFileVerdicts.pm',
           'PREREQ_PM' => {
                            'Test::More' => 0,
-                           'Test::Run::CmdLine' => 0,
+                           'Test::Run::CmdLine' => '0.0105',
                            'Term::ANSIColor' => 0,
                            'Test::Trap' => 0,
-                           'Test::Run::Core' => '0.0109'
+                           'Test::Run::Core' => '0.0110'
                          }
         )
 ;

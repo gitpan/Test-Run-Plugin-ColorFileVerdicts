@@ -27,20 +27,39 @@ sub _initialize
     $self->add_to_backend_plugins("ColorFileVerdicts");
 }
 
-=head2 $self->get_backend_args()
+=head2 $self->private_non_direct_backend_env_mapping()
 
-Over-rides the L<Test::Run::CmdLine> method to process the 
-C<PERL_HARNESS_VERDICT_COLORS> environment variable.
+Returns the non-direct Backend Environment Mappings, that will specify
+the YAML information. See L<Test::Run::CmdLine> for more information.
 
 =cut
 
-sub get_backend_args
+sub private_non_direct_backend_env_mapping
 {
     my $self = shift;
 
-    return [ @{$self->NEXT::get_backend_args()},
-             @{$self->_get_file_verdicts_color_mappings()},
-           ];
+    return
+    [
+        {
+            type => "varmap",
+            env => "PERL_HARNESS_VERDICT_COLORS",
+            arg => "individual_test_file_verdict_colors",
+        },
+    ];
+}
+
+=head2 $self->private_backend_args()
+
+Makes L<Test::Run::CmdLine> process the C<PERL_HARNESS_VERDICT_COLORS> 
+environment variable.
+
+=cut
+
+sub private_backend_args
+{
+    my $self = shift;
+
+    return $self->_get_file_verdicts_color_mappings();
 }
 
 =head1 ENVIRONMENT VARIABLES

@@ -1,6 +1,6 @@
 ---
 name: Test-Run-Plugin-ColorFileVerdicts
-version: 0.01
+version: 0.0101
 author:
   - 'Shlomi Fish <shlomif@cpan.org>'
 abstract: |-
@@ -11,8 +11,8 @@ resources:
   license: http://www.opensource.org/licenses/bsd-license.php
 requires:
   Term::ANSIColor: 0
-  Test::Run::CmdLine: 0
-  Test::Run::Core: 0.0109
+  Test::Run::CmdLine: 0.0105
+  Test::Run::Core: 0.0110
 build_requires:
   Test::More: 0
   Test::Trap: 0
@@ -22,8 +22,12 @@ provides:
     version: 0.01
   Test::Run::Plugin::ColorFileVerdicts:
     file: lib/Test/Run/Plugin/ColorFileVerdicts.pm
-    version: 0.01
-generated_by: Module::Build version 0.2806
+    version: 0.0101
+  Test::Run::Plugin::ColorFileVerdicts::CanonFailedObj:
+    file: lib/Test/Run/Plugin/ColorFileVerdicts/CanonFailedObj.pm
+  Test::Run::Plugin::ColorFileVerdicts::ColorBase:
+    file: lib/Test/Run/Plugin/ColorFileVerdicts/ColorBase.pm
+generated_by: Module::Build version 0.2805
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.2.html
   version: 1.2
