@@ -6,11 +6,11 @@ use strict;
 use NEXT;
 use Term::ANSIColor;
 
+use base 'Test::Run::Base';
 use base 'Test::Run::Plugin::ColorFileVerdicts::ColorBase';
-use base 'Test::Run::Plugin::CmdLine::Output';
-use base 'Class::Accessor';
 
 use Test::Run::Plugin::ColorFileVerdicts::CanonFailedObj;
+
 
 =head1 NAME
 
@@ -23,7 +23,7 @@ Version 0.0101
 
 =cut
 
-our $VERSION = '0.0101';
+our $VERSION = '0.0102';
 
 =head1 SYNOPSIS
 
