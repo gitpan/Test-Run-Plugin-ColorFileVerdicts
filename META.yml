@@ -1,6 +1,6 @@
 ---
 name: Test-Run-Plugin-ColorFileVerdicts
-version: 0.0102
+version: 0.0103
 author:
   - 'Shlomi Fish <shlomif@cpan.org>'
 abstract: |-
@@ -12,17 +12,18 @@ resources:
 requires:
   Term::ANSIColor: 0
   Test::Run::CmdLine: 0.0105
-  Test::Run::Core: 0.0110
+  Test::Run::Core: 0.0111
 build_requires:
   Test::More: 0
-  Test::Trap: 0
+  Test::Run::CmdLine::Trap::ProveApp: 0
+  Test::Run::Trap::Obj: 0
 provides:
   Test::Run::CmdLine::Plugin::ColorFileVerdicts:
     file: lib/Test/Run/CmdLine/Plugin/ColorFileVerdicts.pm
     version: 0.01
   Test::Run::Plugin::ColorFileVerdicts:
     file: lib/Test/Run/Plugin/ColorFileVerdicts.pm
-    version: 0.0102
+    version: 0.0103
   Test::Run::Plugin::ColorFileVerdicts::CanonFailedObj:
     file: lib/Test/Run/Plugin/ColorFileVerdicts/CanonFailedObj.pm
   Test::Run::Plugin::ColorFileVerdicts::ColorBase:

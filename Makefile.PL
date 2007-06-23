@@ -11,8 +11,9 @@ WriteMakefile
                            'Test::More' => 0,
                            'Test::Run::CmdLine' => '0.0105',
                            'Term::ANSIColor' => 0,
-                           'Test::Trap' => 0,
-                           'Test::Run::Core' => '0.0110'
+                           'Test::Run::Core' => '0.0111',
+                           'Test::Run::CmdLine::Trap::ProveApp' => 0,
+                           'Test::Run::Trap::Obj' => 0
                          }
         )
 ;
