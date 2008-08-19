@@ -1,6 +1,6 @@
 ---
 name: Test-Run-Plugin-ColorFileVerdicts
-version: 0.0104
+version: 0.0105
 author:
   - 'Shlomi Fish <shlomif@cpan.org>'
 abstract: |-
@@ -11,7 +11,7 @@ resources:
   license: http://opensource.org/licenses/mit-license.php
 requires:
   Term::ANSIColor: 0
-  Test::Run::CmdLine: 0.0108
+  Test::Run::CmdLine: 0.0110
   Test::Run::Core: 0.0117
 build_requires:
   Test::More: 0
@@ -20,10 +20,10 @@ build_requires:
 provides:
   Test::Run::CmdLine::Plugin::ColorFileVerdicts:
     file: lib/Test/Run/CmdLine/Plugin/ColorFileVerdicts.pm
-    version: 0.01
+    version: 0.0101
   Test::Run::Plugin::ColorFileVerdicts:
     file: lib/Test/Run/Plugin/ColorFileVerdicts.pm
-    version: 0.0104
+    version: 0.0105
   Test::Run::Plugin::ColorFileVerdicts::CanonFailedObj:
     file: lib/Test/Run/Plugin/ColorFileVerdicts/CanonFailedObj.pm
   Test::Run::Plugin::ColorFileVerdicts::ColorBase:
