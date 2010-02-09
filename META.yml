@@ -1,37 +1,35 @@
 ---
-name: Test-Run-Plugin-ColorFileVerdicts
-version: 0.0121
+abstract: "make the file verdict (\"ok\", \"NOT OK\")\ncolorful."
 author:
   - 'Shlomi Fish <shlomif@cpan.org>'
-abstract: |-
-  make the file verdict ("ok", "NOT OK")
-  colorful.
-license: mit
-resources:
-  license: http://www.opensource.org/licenses/mit-license.php
 build_requires:
   Test::More: 0
   Test::Run::CmdLine::Trap::ProveApp: 0
   Test::Run::Trap::Obj: 0
-requires:
-  Moose: 0
-  Term::ANSIColor: 0
-  Test::Run::CmdLine: 0.0120
-  Test::Run::Core: 0.0120
 configure_requires:
-  Module::Build: 0.34
+  Module::Build: 0.36
+generated_by: 'Module::Build version 0.3603'
+license: mit
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Test-Run-Plugin-ColorFileVerdicts
 provides:
   Test::Run::CmdLine::Plugin::ColorFileVerdicts:
     file: lib/Test/Run/CmdLine/Plugin/ColorFileVerdicts.pm
-    version: 0.0121
+    version: 0.0122
   Test::Run::Plugin::ColorFileVerdicts:
     file: lib/Test/Run/Plugin/ColorFileVerdicts.pm
-    version: 0.0121
+    version: 0.0122
   Test::Run::Plugin::ColorFileVerdicts::CanonFailedObj:
     file: lib/Test/Run/Plugin/ColorFileVerdicts/CanonFailedObj.pm
   Test::Run::Plugin::ColorFileVerdicts::ColorBase:
     file: lib/Test/Run/Plugin/ColorFileVerdicts/ColorBase.pm
-generated_by: Module::Build version 0.34
-meta-spec:
-  url: http://module-build.sourceforge.net/META-spec-v1.4.html
-  version: 1.4
+requires:
+  Moose: 0
+  Term::ANSIColor: 0
+  Test::Run::CmdLine: 0.0121
+  Test::Run::Core: 0.0122
+resources:
+  license: http://www.opensource.org/licenses/mit-license.php
+version: 0.0122
